@@ -18,10 +18,10 @@ def word_counter(file_path):
                 word_count[word] += 1 
             else:
                 word_count[word] = 1
-    return word_count.items()
-
+    for key, value in word_count.iteritems():
+        print key, value
 
 # close file
     opened_file.close()
 
-print word_counter("twain.txt")
+word_counter("test.txt")
