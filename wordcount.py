@@ -18,6 +18,8 @@ def word_counter(file_path):
                 word_count[word] += 1 
             else:
                 word_count[word] = 1
+            # instead of if/else . . . 
+            # word_count[word] = word_count.get(word, 0) + 1
     for key, value in word_count.iteritems():
         print key, value
 
